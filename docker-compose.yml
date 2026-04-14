@@ -1,0 +1,22 @@
+services:
+  site:
+    image: nginx:alpine
+    container_name: elemental-site
+    volumes:
+      - ./site:/usr/share/nginx/html
+    labels:
+      - "traefik.enable=true"
+
+      # HTTPS
+      - "traefik.http.routers.elemental-secure.rule=Host(`elemental.ibiete.cloud`)"
+      - "traefik.http.routers.elemental-secure.entrypoints=websecure"
+      - "traefik.http.routers.elemental-secure.tls=true"
+      - "traefik.http.routers.elemental-secure.tls.certresolver=letsencrypt"
+
+      # HTTP -> HTTPS
+      - "traefik.http.routers.elemental.rule=Host(`elemental.ibiete.cloud`)"
+      - "traefik.http.routers.elemental.entrypoints=web"
+      - "traefik.http.routers.elemental.middlewares=elemental-https-redirect"
+
+      - "traefik.http.middlewares.elemental-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.elemental-https-redirect.redirectscheme.permanent=true"
