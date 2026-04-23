@@ -80,3 +80,4 @@ cp -r /apps/template /apps/novo-projeto
 # teste 2 Wed Apr 22 20:29:44 -03 2026
 # deploy ok Wed Apr 22 21:30:19 -03 2026
 # git ok Wed Apr 22 21:40:01 -03 2026
+# reset hard Wed Apr 22 21:43:47 -03 2026
