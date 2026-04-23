@@ -81,3 +81,4 @@ cp -r /apps/template /apps/novo-projeto
 # deploy ok Wed Apr 22 21:30:19 -03 2026
 # git ok Wed Apr 22 21:40:01 -03 2026
 # reset hard Wed Apr 22 21:43:47 -03 2026
+# sem docker Wed Apr 22 21:48:07 -03 2026
