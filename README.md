@@ -83,3 +83,4 @@ cp -r /apps/template /apps/novo-projeto
 # reset hard Wed Apr 22 21:43:47 -03 2026
 # sem docker Wed Apr 22 21:48:07 -03 2026
 # webhook pm2 ok Wed Apr 22 22:36:57 -03 2026
+# fluxo ok Wed Apr 22 22:45:44 -03 2026
